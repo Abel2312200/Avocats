@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-avocat',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-avocat.component.css']
 })
 export class EditAvocatComponent implements OnInit {
-
-  constructor() { }
+  public avocatForm !: FormGroup;
+  constructor(private fb : FormBuilder) { }
 
   ngOnInit(): void {
+    this.avocatForm=this.fb.group({
+        nom:['', Validators.required],
+        prenoms:['', Validators.required],
+        ville:[''],
+        pays:[''],
+        prixHeure:['', Validators.required]
+      });
   }
 
 }

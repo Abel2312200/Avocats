@@ -21,6 +21,8 @@ import { DisAvocatComponent } from './dis-avocat/dis-avocat.component';
 import { EditAvocatComponent } from './edit-avocat/edit-avocat.component';
 import {MatInputModule} from '@angular/material/input';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatSliderModule,
     MatDialogModule,
     HttpClientModule,
@@ -46,6 +49,8 @@ import { RouterModule } from '@angular/router';
     MatCardModule,
     MatMenuModule,
     MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
     RouterModule.forRoot([
       {path :'home', component: ListeAvocatsComponent},
       { path :'', redirectTo:'home', pathMatch:'full'},
