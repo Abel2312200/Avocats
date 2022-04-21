@@ -1,0 +1,47 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill" color="primary">
+    <mat-label><h2>    Formulaire d'ajout d'avocat</h2></mat-label>
+    <input matInput disabled>
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Nom</mat-label>
+      <input matInput>
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Prenoms</mat-label>
+      <input matInput>
+    </mat-form-field></td>
+    </tr>
+  </table>
+
+  <p>
+  <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Ex. 100 Main St" ></textarea>
+    </mat-form-field>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Ville</mat-label>
+      <input matInput placeholder="Ex. Nice">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Pays</mat-label>
+      <input matInput placeholder="Ex. France">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Code Postal</mat-label>
+      <input matInput #postalCode maxlength="5" placeholder="Ex. 94105">
+      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    </mat-form-field></td>
+  </tr></table>
+  <section>
+    <div mat-dialog-actions class="example-button-row" [align]="'end'">
+      <button mat-raised-button color="warn" mat-dialog-close >Fermer</button>
+      <button mat-raised-button color="primary">Sauver</button>
+    </div>
+  </section>
+</form>

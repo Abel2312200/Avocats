@@ -1,0 +1,14 @@
+
+<mat-dialog-content class="mat-typography">
+  <h2>{{avocat?.nom}} {{avocat?.prenoms}}</h2>
+  <p *ngIf="avocat?.dis==true">
+    Avocat indisponible... nombre d'affaire en cours : {{avocat?.nombreAff}}
+  </p>
+  <p *ngIf="avocat?.dis==false">
+    Avocat disponible... chargé d'aucune affaire en cours.
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions align ="end">
+  <button mat-button mat-dialog-close>Annuler</button>
+  <button mat-button mat-dialog-close (click)="openInfo()">retour</button>
+</mat-dialog-actions>

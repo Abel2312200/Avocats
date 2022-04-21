@@ -1,0 +1,87 @@
+{
+  "avocat": [
+    {
+    "nom": "DeLa Roche",
+    "prenoms":"Bert",
+    "prixHeure" : 200,
+    "procesGagne" : 21,
+    "nombreAff": 4,
+    "anneeExp": 12,
+    "photo":"assets/images/images4.jpeg",
+    "dis":true
+    },
+
+    {
+      "nom": "DeLa Roche",
+      "prenoms":"Bert",
+      "prixHeure" : 200,
+      "procesGagne" : 21,
+      "nombreAff": 0,
+      "anneeExp" : 12,
+      "photo":"assets/images/images4.jpeg",
+      "dis":false
+    }
+    ,
+    {
+      "nom": "DeLa Roche",
+      "prenoms":"Bert",
+      "prixHeure" : 200,
+      "procesGagne" : 21,
+      "nombreAff":2,
+      "anneeExp" : 12,
+      "photo":"assets/images/images4.jpeg",
+      "dis":true
+    }
+    ,
+    {
+      "nom": "DeLa Roche",
+      "prenoms":"Bert",
+      "prixHeure" : 200,
+      "procesGagne" : 21,
+      "nombreAff": 0,
+      "anneeExp" : 12,
+      "photo":"assets/images/images4.jpeg",
+      "dis":false
+    }
+    ,
+    {
+      "nom": "Bonjour tout ",
+      "prenoms":"Bert",
+      "prixHeure" : 200,
+      "procesGagne" : 21,
+      "nombreAff": 0,
+      "anneeExp" : 12,
+      "photo":"assets/images/images4.jpeg",
+      "dis":false
+    }
+    ,
+    {
+      "nom": "DeLa Roche",
+      "prenoms":"Bert",
+      "prixHeure" : 200,
+      "procesGagne" : 21,
+      "nombreAff": 1,
+      "anneeExp" : 12,
+      "photo":"assets/images/images4.jpeg",
+      "dis":true
+    }
+  ]
+  ,
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

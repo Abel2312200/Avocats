@@ -1,0 +1,66 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="475px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item (click)="openEdit()">ajouter avocat</button>
+              <button mat-menu-item>suppri</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+            <div class="container px-4 px-lg-5 mt-5">
+              <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                  <div class="col mb-5" *ngFor="let avocat of listeDesAvocats">
+                      <div class="card h-2">
+                          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">{{avocat.nombreAff}}</div>
+                          <img class="card-img-top" [src]="avocat.photo" alt="..." />
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <h5 class="fw-bolder">{{avocat.nom}} {{avocat.prenoms}}</h5>
+                                  <span class="text-muted">{{avocat.prixHeure|currency :'EUR'}}</span>
+                              </div>
+                          </div>
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                          <div class="text-center">
+                          <button mat-stroked-button class="btn btn-outline-dark mt-auto" [matMenuTriggerFor]="info" #menuTrigger>Info</button>
+                                <mat-menu #info="matMenu">
+                                   <!-- info avocats-->
+                                        <div class="card h-100">
+
+                                          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"></div>
+                                          <img class="card-img-top" [src]="avocat?.photo" alt="..." />
+                                          <div class="card-body p-4">
+                                              <div class="text-center">
+                                                  <h5 class="fw-bolder">{{avocat?.nom}}</h5>
+                                                  <p>
+                                                    Il est dans les affaires internationnales .....f&h
+                                                  </p>
+                                              </div>
+                                          </div>
+                                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                              <div mat-dialog-actions class="liste-btn">
+                                                <button mat-stroked-button  mat-dialog-close class="btn btn-outline-dark mt-auto">Fermer</button>
+                                                <button mat-stroked-button class="btn btn-outline-dark mt-auto" (click)="openInfo(avocat)">Disponibilité</button>
+                                              </div>
+                                          </div>
+                                          </div>
+                                </mat-menu>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
